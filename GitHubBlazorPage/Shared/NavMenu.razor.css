@@ -1,14 +1,23 @@
-﻿.navItems
+﻿button {
+    color: #512bd4;
+}
+img
 {
-    display:flex;
+    width:3rem;
+}
+.navItems {
+    display: flex;
     flex-direction: row;
     vertical-align: middle;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.nav-item ::deep a.active
-{
-    color:white;
+.nav-item ::deep a {
+    color: #512bd4;
+}
+
+.nav-item ::deep a.active {
+    color: white!important;
 }
 
 .navbar-toggler

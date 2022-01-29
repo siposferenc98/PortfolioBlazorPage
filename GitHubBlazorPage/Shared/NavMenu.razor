@@ -1,9 +1,9 @@
-﻿<nav class="navbar text-white m-3">
+﻿<nav class="navbar text-white m-3 mb-5">
     <div class="navbar-brand px-3">
-        <p>Portfoliotest</p>
+        <img src="./pictures/SFlogo.png"/>
     </div>
 
-    <button class="navbar-toggler oi oi-menu text-white-50" @onclick="ToggleNavMenu"></button>
+    <button class="navbar-toggler oi oi-menu" @onclick="ToggleNavMenu"></button>
 
     <div class="navItems @NavMenuCssClass">
         <div class="nav-item px-3">
@@ -15,7 +15,7 @@
         {
             <div class="nav-item px-3">
                 <NavLink href="@linkPairs.Value" class="nav-link">
-                    <span>@linkPairs.Key</span>
+                    @linkPairs.Key
                 </NavLink>
             </div>    
         }
