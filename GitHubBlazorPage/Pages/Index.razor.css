@@ -1,7 +1,9 @@
-﻿
+﻿* {
+    text-shadow: 1px 1px black;
+}
 .me img
 {
-    max-width:15rem;
+    max-width:10rem;
     width:100%;
     border-radius:10px;
     margin-bottom:2rem;
@@ -10,4 +12,27 @@
 .container
 {
     text-align:center;
+}
+
+a
+{
+    text-decoration: none;
+    color:white;
+}
+
+li
+{
+    transition:all 0.3s;
+}
+
+li:hover
+{
+    background-color:rgba(255,255,255,0.5)!important;
+}
+
+@media(min-width:2000px)
+{
+    img {
+        max-width: 15rem!important;
+    }
 }

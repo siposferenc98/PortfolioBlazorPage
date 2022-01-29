@@ -6,17 +6,18 @@
     <div class="me">
         <img src="./pictures/me.jpg" class="img-fluid"/>
     </div>
-    <div>
-        @if(IsPageEnglish)
+    <div> 
+        <h1 class="display-6 fw-bold">@(IsPageEnglish ? "Ferenc Sipos" : "Sipos Ferenc")</h1>
+        <h2 class="display-5">@(IsPageEnglish ? "Software Developer" : "Szoftverfejlesztő")</h2>
+        <ul class="list-group list-group-horizontal-md mt-5">
+        @foreach(KeyValuePair<string,string> linkPairs in mediaLinks)
         {
-            <h1>Ferenc Sipos</h1>
-            <h2>Software Developer</h2>
+            <li class="list-group-item flex-fill bg-opacity-10 bg-white">
+                <a href=@linkPairs.Value>@linkPairs.Key</a>
+            </li>
         }
-        else
-        {
-            <h1>Sipos Ferenc</h1>
-            <h2>Szoftverfejlesztő</h2>
-        }
+        </ul>
+        <div></div>
     </div>
 </div>
 
@@ -25,4 +26,14 @@
 {
     [CascadingParameter]
     private bool IsPageEnglish { get; set; }
+
+    private Dictionary<string, string> mediaLinks = new()
+        {
+            { "Facebook", "https://www.facebook.com/rweefdcv/" },
+            { "Twitter", "https://twitter.com/dmgerzz" },
+            { "CodinGame", "https://www.codingame.com/profile/c82e091ac08290ac2235d97777c2db376079234" },
+            { "Email", "mailto:ferenc.m.sipos@gmail.com" },
+            { "GitHub", "https://github.com/siposferenc98" },
+            { "StackOverflow", "https://stackoverflow.com/users/16061294/dmgerz?tab=profile" }
+        };
 }
