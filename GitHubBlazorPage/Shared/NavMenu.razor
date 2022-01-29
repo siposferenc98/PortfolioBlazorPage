@@ -1,0 +1,51 @@
+﻿<nav class="navbar text-white m-3">
+    <div class="navbar-brand px-3">
+        <p>Portfoliotest</p>
+    </div>
+
+    <button class="navbar-toggler oi oi-menu text-white-50" @onclick="ToggleNavMenu"></button>
+
+    <div class="navItems @NavMenuCssClass">
+        <div class="nav-item px-3">
+            <NavLink href="" Match="NavLinkMatch.All" class="nav-link">
+                <span>@(IsPageEnglish ? "Home" : "Főoldal")</span>
+            </NavLink>
+        </div>
+        @foreach(KeyValuePair<string,string> linkPairs in IsPageEnglish ? navLinks : navLinksHU)
+        {
+            <div class="nav-item px-3">
+                <NavLink href="@linkPairs.Value" class="nav-link">
+                    <span>@linkPairs.Key</span>
+                </NavLink>
+            </div>    
+        }
+    </div>   
+</nav>
+
+@code 
+{
+    [CascadingParameter]
+    private bool IsPageEnglish { get; set; }
+
+    private Dictionary<string, string> navLinks = new()
+        {
+            { "Skills" , "skills" },
+            { "Education" , "education" }
+
+        };
+    private Dictionary<string, string> navLinksHU = new()
+        {
+            { "Nyelvek és technológiák" , "skills" },
+            { "Tanulmányok" , "education" }
+
+        };
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

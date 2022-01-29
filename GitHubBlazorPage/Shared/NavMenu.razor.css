@@ -1,0 +1,39 @@
+﻿.navItems
+{
+    display:flex;
+    flex-direction: row;
+    vertical-align: middle;
+    font-weight:bold;
+}
+
+.nav-item ::deep a.active
+{
+    color:white;
+}
+
+.navbar-toggler
+{
+    display:none;
+}
+
+.collapse {
+    display: flex;
+}
+
+@media(max-width:768px)
+{
+    .navbar-toggler
+    {
+        display:block;
+    }
+    .navItems
+    {
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+    .collapse
+    {
+        display:none;
+    }
+}

@@ -1,0 +1,28 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div class = "container text-white">
+    <div class="me">
+        <img src="./pictures/me.jpg" class="img-fluid"/>
+    </div>
+    <div>
+        @if(IsPageEnglish)
+        {
+            <h1>Ferenc Sipos</h1>
+            <h2>Software Developer</h2>
+        }
+        else
+        {
+            <h1>Sipos Ferenc</h1>
+            <h2>Szoftverfejlesztő</h2>
+        }
+    </div>
+</div>
+
+
+@code
+{
+    [CascadingParameter]
+    private bool IsPageEnglish { get; set; }
+}

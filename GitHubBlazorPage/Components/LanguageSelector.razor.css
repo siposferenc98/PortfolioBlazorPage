@@ -1,0 +1,14 @@
+﻿.active
+{
+    color:white;
+    font-weight:bold;
+}
+
+span
+{
+    cursor:pointer;
+}
+
+div {
+    user-select: none;
+}

@@ -1,0 +1,19 @@
+﻿<div class="text-white-50">
+    <span  class="@(LanguageIsEnglish ? "active" : "")" @onclick="()=>UpdateLanguage(true)">EN</span> 
+    <span>/</span>
+    <span class="@(LanguageIsEnglish ? "" : "active")" @onclick="()=>UpdateLanguage(false)">HU</span>
+</div>
+
+@code {
+    [Parameter]
+    public bool LanguageIsEnglish { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> LanguageIsEnglishChanged { get; set; }
+
+    async Task UpdateLanguage(bool value)
+    {
+        LanguageIsEnglish = !LanguageIsEnglish;
+        await LanguageIsEnglishChanged.InvokeAsync(LanguageIsEnglish);
+    }
+}
