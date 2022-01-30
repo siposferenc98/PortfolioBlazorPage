@@ -1,0 +1,22 @@
+﻿<div class="slideRightDiv" style="@widthStyle" @onclick="toggleIsCollapsed">
+    <div class="openButtonDiv">
+        <p class="display-6 openText">Nyitó</p>
+    </div>
+    <div class="container slideRightDivContent" style="@heightWidth">
+        <h1 style="@visibilityContent">Valami iskola</h1>
+        <p style="@visibilityContent" >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum vehicula lobortis. Mauris sed eros dapibus, iaculis neque nec, elementum velit. Phasellus convallis pulvinar nibh at ultrices. Morbi finibus posuere ipsum, et convallis diam commodo a. Donec fermentum ut purus vel malesuada. Fusce id fermentum tortor.
+        </p>
+    </div>
+</div>
+
+@code {
+    private bool isCollapsed { get; set; } = true;
+    private string widthStyle => isCollapsed ? "" : "width:100%";
+    private string heightWidth => isCollapsed ? "height:0;width:0;" : "height:100%;width:100%;";
+    private string visibilityContent => isCollapsed ? "visibility:hidden;" : "";
+    private void toggleIsCollapsed()
+    {
+        isCollapsed = !isCollapsed;
+    }
+}

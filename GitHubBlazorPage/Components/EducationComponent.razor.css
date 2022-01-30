@@ -1,0 +1,35 @@
+﻿.slideRightDiv {
+    display: flex;
+    height: 200px;
+    width: 30px;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.5s;
+}
+
+.openButtonDiv
+{
+    width:30px;
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.openText {
+    font-size:24px;
+    color:white;
+    background-color: transparent;
+    transform: rotate(-90deg);
+}
+
+.slideRightDivContent {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow:hidden;
+    color: white;
+}
+p {
+    transition: all 1s;
+    transition-delay:0.2s;
+}

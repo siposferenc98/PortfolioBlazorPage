@@ -3,13 +3,17 @@
 <PageTitle>Home</PageTitle>
 
 <div class = "container text-white">
-    <div class="me">
+
+    <div class="me innerDiv">
         <img src="./pictures/me.jpg" class="img-fluid"/>
     </div>
-    <div> 
-        <h1 class="display-6 fw-bold">@(IsPageEnglish ? "Ferenc Sipos" : "Sipos Ferenc")</h1>
-        <h2 class="display-5">@(IsPageEnglish ? "Software Developer" : "Szoftverfejlesztő")</h2>
-        <ul class="list-group list-group-horizontal-md m-5">
+
+    <h1 class="display-5" style="font-weight:350">@(IsPageEnglish ? "Ferenc Sipos" : "Sipos Ferenc")</h1>
+    <h2 class="display-4 gradientText">@(IsPageEnglish ? "Software Developer" : "Szoftverfejlesztő")</h2>
+    
+
+    <div>
+        <ul class="list-group list-group-horizontal-md m-4">
         @foreach(KeyValuePair<string,string> linkPairs in mediaLinks)
         {
             <li class="list-group-item flex-fill bg-opacity-10 bg-white" onclick="window.open('@linkPairs.Value','_blank')">
@@ -17,7 +21,14 @@
             </li>
         }
         </ul>
-        <h3 class="display-4">Experienced in .NET development</h3>
+        @if(IsPageEnglish)
+        {
+            <h3 class="display-4">Experienced in <span class="dotnetcolor">.NET</span> development</h3>
+        }
+        else
+        {
+            <h3 class="display-4"><span class="dotnetcolor">.NET</span> fejlesztésben jártas.</h3>
+        }
     </div>
 </div>
 

@@ -1,0 +1,10 @@
+﻿<div class="col" style="background-color:@BackGroundColor">
+    @Text
+</div>
+
+@code {
+    [Parameter]
+    public string BackGroundColor { get; set; }
+    [Parameter]
+    public string Text{ get; set; }
+}

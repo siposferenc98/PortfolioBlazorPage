@@ -1,0 +1,16 @@
+﻿.educationDiv {
+    color: white;
+    min-height: 10rem;
+    margin: 2rem 0 2rem 0;
+    padding: 1rem;
+}
+
+    .educationDiv::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right, #7e64de, #0078D7);
+    }

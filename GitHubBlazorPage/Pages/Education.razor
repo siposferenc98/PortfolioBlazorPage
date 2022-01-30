@@ -1,5 +1,58 @@
 ﻿@page "/education"
 
+<div class="container">
+    @if(IsPageEnglish)
+    {
+        <WideTileComponent School="Software Developer">
+            Introduction to web development, Python, SQL and block coding along with Git version control.<br/>
+
+            Activley expanding C#, JavaScript, PHP knowledge. Object-oriented programming, Unit Testing, WPF subsystem.<br/>
+
+            Continuously studying MVVM architecture, Blazor(ASP.NET) and trying out several other programming languages.<br/>
+        </WideTileComponent>
+
+
+        <WideTileComponent School="CNC machine operator">
+            Gained experience in metalworking, both by hand, and by CNC machines. <br />
+
+            G-code programming basics on 3-axis CNC machines.
+        </WideTileComponent>
+
+        <WideTileComponent School="Secondary School of Economics and Informatics">
+            Basic C++ and programming knowledge, fast typing, MS Office.<br/>
+
+            GCSE - intermediate level.
+        </WideTileComponent>
+    }
+    else
+    {
+        <WideTileComponent School="Szoftverfejlesztő">
+            Bevezetés a webfejlesztésbe, Python, SQL és block coding-al való ismerkedés Git verziókezelést használva.<br/>
+
+            C#, JavaScript, PHP tudás folyamatos bővítése. Object-oriented programozás, Unit Testing, WPF grafikus rendszer.<br/>
+
+            Napi szinten MVVM architektúra, Blazor(ASP.NET) és további rendszerek/nyelvek tanulása.<br/>
+        </WideTileComponent>
+
+
+        <WideTileComponent School="CNC gépkezelő">
+            Betekintést nyertem a fémmegmunkálás világába, mind kézzel, mind CNC gépekkel.<br />
+
+            Alapvető G-kódos programozási tudást szereztem.
+        </WideTileComponent>
+
+        <WideTileComponent School="Közgazdasági és Informatikai Szakközépiskola">
+            C++-al való ismerkedés, alapvető programozási ismeretek szerzése, gyors írás, MS Office.<br/>
+
+            Középfokú érettségi bizonyítvány.
+        </WideTileComponent>
+    }
+
+</div>
+
 @code {
+        [CascadingParameter]
+        private bool IsPageEnglish { get; set; }
+
 
 }

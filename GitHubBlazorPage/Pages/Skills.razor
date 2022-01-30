@@ -1,5 +1,38 @@
 ﻿@page "/skills"
 
+<div class="container">
+    @if(IsPageEnglish)
+    {
+        <h1 class="display-1 text-white">What I do:</h1>
+        <h2 class="display-6 text-white">I live close to Budapest, currently learning <span class="dotnetcolor">Software Development</span> and Testing at Cegléd.</h2>
+        <h2 class="display-3 text-white">Best at:</h2>
+    }
+    else
+    {
+        <h1 class="display-1 text-white">Pár szó rólam:</h1>
+        <h2 class="display-6 text-white">Budapesthez közel lakom, Cegléden <span class="dotnetcolor">Szoftverfejlesztő</span> és Tesztelő képzésre járok.</h2>
+        <h2 class="display-3 text-white">Ezekbe vagyok a legjobb:</h2>
+    }
+    <div class="row">
+        <Tile BackGroundColor="#512bd4" Text="C#"></Tile>
+        <Tile BackGroundColor="#0078D7" Text="WPF"></Tile>
+        <Tile BackGroundColor="#512bd4" Text="Blazor"></Tile>
+        <Tile BackGroundColor="#0078D7" Text="JS"></Tile>
+        <Tile BackGroundColor="#512bd4" Text="PHP"></Tile>
+    </div>
+    <h3 class="display-6 text-white">@(IsPageEnglish ? "Basic knowledge:" : "Alapvető ismeretek:")</h3>
+    <div class="row">
+        <Tile BackGroundColor="#512bd4" Text="Angular"></Tile>
+        <Tile BackGroundColor="#0078D7" Text="jQuery"></Tile>
+        <Tile BackGroundColor="#512bd4" Text="TS"></Tile>
+        <Tile BackGroundColor="#0078D7" Text="SQL"></Tile>
+    </div>
+</div>
+
+
 @code {
+    [CascadingParameter]
+    private bool IsPageEnglish { get; set; }
+
 
 }
