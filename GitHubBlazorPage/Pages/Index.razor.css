@@ -1,7 +1,4 @@
-﻿* {
-    
-}
-.me img
+﻿.me img
 {
     max-width:10rem;
     width:100%;
@@ -9,24 +6,9 @@
     margin-bottom:2rem;
 }
 
-.containerDiv {
-    display:flex;
-}
-.innerDiv
-{
-    flex:1;
-}
-
 .container {
     text-align: center;
 }
-.gradientText {
-    color: transparent;
-    background: linear-gradient(to right, #7e64de, #0078D7 150%);
-    -webkit-background-clip: text;
-}
-
-
 li {
     transition: all 0.3s;
     text-decoration: none;
@@ -38,14 +20,6 @@ li {
 li:hover
 {
     background-color:rgba(255,255,255,0.5)!important;
-}
-
-.dotnetcolor {
-    color:#7e64de;
-}
-.microsoftcolor {
-    color: #0078D7;
-    font-weight:400;
 }
 
 @media(min-width:2000px)

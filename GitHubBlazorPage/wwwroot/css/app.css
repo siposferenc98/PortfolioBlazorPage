@@ -1,7 +1,55 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Segoe UI';
+    font-family: -apple-system, Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.gradientText {
+    color: transparent;
+    background-size:200% 200%;
+    background: linear-gradient(to right, #7e64de, #0078D7 150%);
+    -webkit-background-clip: text;
+}
+.loadingDiv {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column
+}
+
+.loadingText {
+    color: transparent;
+    text-align: center;
+    font-weight: 600;
+    background: linear-gradient(to right, #7e64de, #0078D7 150%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    animation: FlowingAnimation 1.5s ease infinite;
+}
+
+@keyframes FlowingAnimation {
+    0% {
+        background-position: 10% 0%
+    }
+
+    50% {
+        background-position: 91% 100%
+    }
+
+    100% {
+        background-position: 10% 0%
+    }
+}
+
+.dotnetcolor {
+    color: #7e64de;
+}
+
+.microsoftcolor {
+    color: #0078D7;
 }
 
 h1:focus {
