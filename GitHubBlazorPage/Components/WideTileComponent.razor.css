@@ -14,3 +14,7 @@
         border-image-slice: 1;
         border-image-source: linear-gradient(to right, #7e64de, #0078D7);
     }
+p {
+    font-size: 1rem;
+    padding-left: 1rem;
+}

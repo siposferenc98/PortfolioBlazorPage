@@ -1,0 +1,40 @@
+﻿<div>
+    <ul class="list-group list-group-horizontal-md m-4">
+        @foreach (TabPage tabPage in Pages)
+        {
+        <button
+            class="list-group-item flex-fill bg-opacity-10 bg-white @GetButtonClass(tabPage)"
+            @onclick=@( () => ActivatePage(tabPage) )>
+            @tabPage.Title
+        </button>
+        }
+    </ul>
+</div>
+
+<CascadingValue Value="this">
+  @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    public TabPage ActivePage { get; set; }
+    List<TabPage> Pages = new();
+
+    internal void AddPage(TabPage tabPage)
+    {
+      Pages.Add(tabPage);
+      if (Pages.Count == 1)
+        ActivePage = tabPage;
+      StateHasChanged();
+    }
+    string GetButtonClass(TabPage page)
+    {
+      return page == ActivePage ? "active" : "";
+    }
+    void ActivatePage(TabPage page)
+    {
+      ActivePage = page;
+    }
+}

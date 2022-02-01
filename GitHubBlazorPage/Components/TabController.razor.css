@@ -1,0 +1,13 @@
+﻿body {
+}
+
+button {
+    color: #7e64de;
+    border: none;
+    text-decoration: none;
+}
+
+    button.active {
+        color: white !important;
+        margin: 0!important;
+    }

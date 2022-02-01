@@ -1,0 +1,73 @@
+﻿@page "/misc"
+<PageTitle>@(IsPageEnglish ? "Miscellaneous" : "Egyebek" )</PageTitle>
+
+<div class="container" style="border: 2px solid #7e64de;">
+    
+        @if(IsPageEnglish)
+        {
+            <TabController>
+                <TabPage Title="CodinGame">
+                    <p>2021.06.14 - Global rank : Master</p>
+                    <p>Spring Challenge 2021: Gold League - <span class="dotnetcolor">687/1,618</span> || Global rank - <span class="dotnetcolor">919/6,867</span></p>
+                    <p>Global ranking: <span class="dotnetcolor">2,294/385,397</span> - <span class="microsoftcolor"> Top 0.6%</span></p>
+                    <p>Country ranking: <span class="dotnetcolor">47/3,506</span> - <span class="microsoftcolor">Top 2%</span></p>
+                </TabPage>
+                <TabPage Title="IDE/Text editors">
+                    <p>My most used IDE is <span class="dotnetcolor">Visual Studio</span>, always keeping up with the latest releases.</p>
+                    <p><span class="microsoftcolor">Visual Studio Code</span> is my preferred editor when it comes to frontend.</p>
+                    <p>Also used Notepad++ in the past for quick edits.</p>
+                    <p>I would also like to try out JetBrains Rider in the future.</p>
+                </TabPage>
+                <TabPage Title="Other tools">
+                    <p>Video and Photo editing:
+                        <ul>
+                            <li>Adobe Photoshop</li>
+                            <li>Sony Vegas</li>
+                            <li>Adobe After Effects</li>
+                            <li>Blender</li>
+                        </ul>
+                    </p>
+                    <p>Bootstrap studio, Wordpress basics. </p>
+                   <p>I have a decent knowledge of hardware, built a couple of PC-s, also own an iOS device and used several other platforms including Linux, macOS, Android, Windows Phone.</p>
+                </TabPage>
+            </TabController>
+        }
+        else
+        {
+            <TabController>
+                <TabPage Title="CodinGame">
+                    <p>2021.06.14 - Globális rank : Master</p>
+                    <p>Spring Challenge 2021: Gold League - <span class="dotnetcolor">687/1,618</span> || Global rank - <span class="dotnetcolor">919/6,867</span></p>
+                    <p>Globális rank: <span class="dotnetcolor">2,294/385,397</span> - <span class="microsoftcolor"> Top 0.6%</span></p>
+                    <p>Országos rank: <span class="dotnetcolor">47/3,506</span> - <span class="microsoftcolor">Top 2%</span></p>
+                </TabPage>
+                <TabPage Title="IDE/Szövegszerkesztők">
+                    <p>Legtöbbet <span class="dotnetcolor">Visual Studio</span>-t használok, folyamatosan naprakészen tartva.</p>
+                    <p><span class="microsoftcolor">Visual Studio Code</span>-ot használok minden másra, leginkább frontend-hez.</p>
+                    <p>Régebben Notepad++-t is használtam alap oldalakhoz és gyors szerkesztésekhez.</p>
+                    <p>Valamikor a közeljövőbe JetBrains Rider-t is ki szeretném próbálni.</p>
+                </TabPage>
+                <TabPage Title="Egyebek">
+                    <p>Videó és képszerkesztés:
+                        <ul>
+                            <li>Adobe Photoshop</li>
+                            <li>Sony Vegas</li>
+                            <li>Adobe After Effects</li>
+                            <li>Blender</li>
+                        </ul>
+                    </p>
+                    <p>Bootstrap studio, Wordpress alapok. </p>
+                   <p>Építettem pár PC-t, elfogadható hardveres tudással is rendelkezem, éppen iOS-es készüléket használok és van tapasztalatom más platformokkal is,pl: Linux, macOS, Android, Windows Phone.</p>
+                </TabPage>
+            </TabController>
+        }
+    
+</div>
+<div class="container builtWithContainer">
+    <h1 class="display-5">@(IsPageEnglish ?  "This page was built with Blazor WebAssembly" : "Blazor WebAssembly-vel készült a weboldal." )</h1>
+</div>
+
+@code {
+        [CascadingParameter]
+        private bool IsPageEnglish { get; set; }
+}

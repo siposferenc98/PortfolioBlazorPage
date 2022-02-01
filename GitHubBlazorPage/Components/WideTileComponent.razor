@@ -1,10 +1,10 @@
 ﻿<div class="container educationDiv">
-    <h1 class="display-4">@School</h1>
-    <p style="font-size:1rem;line-height:2;padding-left:1rem;">@ChildContent</p>
+    <h1 class="display-5">@Title</h1>
+    <p>@ChildContent</p>
 </div>
 @code {
     [Parameter]
-    public string School { get; set; }
+    public string Title { get; set; }
     [Parameter]
     public RenderFragment ChildContent{ get; set; }
 

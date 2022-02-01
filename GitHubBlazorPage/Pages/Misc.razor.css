@@ -1,0 +1,16 @@
+﻿body {
+}
+
+.container {
+    min-height:30vh;
+}
+li {
+    list-style:none;
+}
+.builtWithContainer
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}

@@ -1,50 +1,51 @@
 ﻿@page "/education"
+<PageTitle>@(IsPageEnglish ? "Education" : "Tanulmányok" )</PageTitle>
 
 <div class="container">
     @if(IsPageEnglish)
     {
-        <WideTileComponent School="Software Developer">
-            Introduction to web development, Python, SQL and block coding along with Git version control.<br/>
+        <WideTileComponent Title="Software Developer">
+            <p>Introduction to web development, Python, SQL and block coding along with Git version control.</p>
 
-            Activley expanding C#, JavaScript, PHP knowledge. Object-oriented programming, Unit Testing, WPF subsystem.<br/>
+            <p>Activley expanding C#, JavaScript, PHP knowledge. Object-oriented programming, Unit Testing, WPF subsystem.</p>
 
-            Continuously studying MVVM architecture, Blazor(ASP.NET) and trying out several other programming languages.<br/>
+            <p>Continuously studying MVVM architecture, Blazor(ASP.NET) and trying out several other programming languages.</p>
         </WideTileComponent>
 
 
-        <WideTileComponent School="CNC machine operator">
-            Gained experience in metalworking, both by hand, and by CNC machines. <br />
+        <WideTileComponent Title="CNC machine operator">
+            <p>Gained experience in metalworking, both by hand, and by CNC machines. </p>
 
-            G-code programming basics on 3-axis CNC machines.
+            <p>G-code programming basics on 3-axis CNC machines.</p>
         </WideTileComponent>
 
-        <WideTileComponent School="Secondary School of Economics and Informatics">
-            Basic C++ and programming knowledge, fast typing, MS Office.<br/>
+        <WideTileComponent Title="Secondary School of Economics and Informatics">
+            <p>Basic C++ and programming knowledge, fast typing, MS Office.</p>
 
-            GCSE - intermediate level.
+            <p>GCSE - intermediate level.</p>
         </WideTileComponent>
     }
     else
     {
-        <WideTileComponent School="Szoftverfejlesztő">
-            Bevezetés a webfejlesztésbe, Python, SQL és block coding-al való ismerkedés Git verziókezelést használva.<br/>
+        <WideTileComponent Title="Szoftverfejlesztő">
+            <p>Bevezetés a webfejlesztésbe, Python, SQL és block coding-al való ismerkedés Git verziókezelést használva.</p>
 
-            C#, JavaScript, PHP tudás folyamatos bővítése. Object-oriented programozás, Unit Testing, WPF grafikus rendszer.<br/>
+            <p>C#, JavaScript, PHP tudás folyamatos bővítése. Object-oriented programozás, Unit Testing, WPF grafikus rendszer.</p>
 
-            Napi szinten MVVM architektúra, Blazor(ASP.NET) és további rendszerek/nyelvek tanulása.<br/>
+            <p>Napi szinten MVVM architektúra, Blazor(ASP.NET) és további rendszerek/nyelvek tanulása.</p>
         </WideTileComponent>
 
 
-        <WideTileComponent School="CNC gépkezelő">
-            Betekintést nyertem a fémmegmunkálás világába, mind kézzel, mind CNC gépekkel.<br />
+        <WideTileComponent Title="CNC gépkezelő">
+            <p>Betekintést nyertem a fémmegmunkálás világába, mind kézzel, mind CNC gépekkel.</p>
 
-            Alapvető G-kódos programozási tudást szereztem.
+            <p>Alapvető G-kódos programozási tudást szereztem.</p>
         </WideTileComponent>
 
-        <WideTileComponent School="Közgazdasági és Informatikai Szakközépiskola">
-            C++-al való ismerkedés, alapvető programozási ismeretek szerzése, gyors írás, MS Office.<br/>
+        <WideTileComponent Title="Közgazdasági és Informatikai Szakközépiskola">
+            <p>C++-al való ismerkedés, alapvető programozási ismeretek szerzése, gyors írás, MS Office.</p>
 
-            Középfokú érettségi bizonyítvány.
+            <p>Középfokú érettségi bizonyítvány.</p>
         </WideTileComponent>
     }
 
