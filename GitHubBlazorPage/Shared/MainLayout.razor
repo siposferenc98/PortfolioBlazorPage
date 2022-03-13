@@ -4,11 +4,12 @@
 <main>
     <article class="content px-4">
         <CascadingValue Value="@IsLanguageEnglish">
-            <NavMenu/>
+            <NavMenu>
+                <LanguageSelector @bind-LanguageIsEnglish=IsLanguageEnglish></LanguageSelector>
+            </NavMenu>
             @Body
         </CascadingValue>
         <footer>
-            <LanguageSelector @bind-LanguageIsEnglish=IsLanguageEnglish></LanguageSelector>
         </footer>
     </article>
 </main>

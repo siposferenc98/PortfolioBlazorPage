@@ -13,6 +13,7 @@
                 <span>@(IsPageEnglish ? "Home" : "Főoldal")</span>
             </NavLink>
         </div>
+
         @foreach(KeyValuePair<string,string> linkPairs in IsPageEnglish ? navLinks : navLinksHU)
         {
             <div class="nav-item px-3">
@@ -21,11 +22,18 @@
                 </NavLink>
             </div>    
         }
+
+        <div class="d-flex justify-content-center align-items-center">
+            @ChildContent
+        </div>
     </div>   
 </nav>
 
 @code 
 {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
     [CascadingParameter]
     private bool IsPageEnglish { get; set; }
 
